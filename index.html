@@ -23,21 +23,22 @@
 
      <script>
             //window.location = "http://203.143.20.94/sf2/";
-           
-           try {
-                 var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
-            
-                ref.addEventListener('loadstart', function(event) { 
-                    alert(event.url); 
-                });
 
-            }
-            catch(err) {
+            document.addEventListener("deviceready", function () {
+                try {
+                        var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
+                    
+                        ref.addEventListener('loadstart', function(event) { 
+                            alert(event.url); 
+                        });
 
-               alert(err.message);
+                    }
+                    catch(err) {
 
-            }
+                    alert(err.message);
 
+                    }
+            }, false);
         </script>
       
       <script type="text/javascript" src="http://debug1.phonegap.com/target/target-script-min.js#some_unique_key"></script>
