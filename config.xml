@@ -19,7 +19,7 @@
      C3
   </author>
 
-  <plugin name="cordova-plugin-inappbrowser"/>
+  <plugin name="cordova-plugin-inappbrowser" spec="1.7.1" />
 
   <access origin="*"/>
   <allow-intent href="http://*/*"/>
