@@ -19,6 +19,8 @@
      C3
   </author>
 
+  <plugin name="npm i cordova-plugin-inappbrowser"/>
+
   <access origin="*"/>
   <allow-intent href="http://*/*"/>
   <allow-intent href="https://*/*"/>
