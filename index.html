@@ -24,17 +24,19 @@
      <script>
             //window.location = "http://203.143.20.94/sf2/";
            
-            alert("a");
+           try {
+                 var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
+            
+                ref.addEventListener('loadstart', function(event) { 
+                    alert(event.url); 
+                });
 
-            var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
-           
-            alert(ref);
-           
-            ref.addEventListener('loadstart', function(event) { 
-                alert(event.url); 
-            });
+            }
+            catch(err) {
 
-            alert("b");
+               alert(err.message);
+
+            }
 
         </script>
       
