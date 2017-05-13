@@ -26,6 +26,11 @@
 
             document.addEventListener("deviceready", function () {
                 try {
+
+                        alert(cordova);
+                        
+                        alert(cordova.InAppBrowser);
+
                         var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
                     
                         ref.addEventListener('loadstart', function(event) { 
