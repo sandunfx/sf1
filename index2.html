@@ -5,7 +5,7 @@
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     <script type="text/javascript" charset="utf-8">
 
-    // Wait for device API libraries to load
+    / // Wait for device API libraries to load
     //
     document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -13,10 +13,10 @@
     //
     function onDeviceReady() {
          var ref = window.open('http://apache.org', '_blank', 'location=yes');
-         ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
-         ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
-         ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
-         ref.addEventListener('exit', function(event) { alert(event.type); });
+         // close InAppBrowser after 5 seconds
+         setTimeout(function() {
+             ref.close();
+         }, 5000);
     }
 
     </script>

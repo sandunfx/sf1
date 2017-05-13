@@ -9,7 +9,9 @@
 
         <h1>aaaaaaaaaaaaaa</h1>
         <br>
+        <br>
         <a href="index2.html"> test2 </a>
+        <br>
         <br>
         <a href="http://203.143.20.94/sf2/"> test3 </a>
 
@@ -27,20 +29,20 @@
             document.addEventListener("deviceready", function () {
                 try {
 
-                        alert(cordova);
+                      //  alert(cordova);
                         
                         alert(cordova.InAppBrowser);
 
                         var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
                     
                         ref.addEventListener('loadstart', function(event) { 
-                            alert(event.url); 
+                     //       alert(event.url); 
                         });
 
                     }
                     catch(err) {
 
-                    alert(err.message);
+                   // alert(err.message);
 
                     }
             }, false);
