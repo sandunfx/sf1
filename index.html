@@ -11,6 +11,12 @@
                 window.open = cordova.InAppBrowser.open;
             }
 
+            var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
+           
+            ref.addEventListener('loadstart', function(event) { 
+                alert(event.url); 
+            });
+
         </script>
 
     </head>
@@ -23,13 +29,6 @@
         <a href="http://203.143.20.94/sf2/"> test3 </a>
 
         <br>
-
-        <select id="help-select">
-            <option value="default">Need help?</option>
-            <option value="article">Show me a helpful article</option>
-            <option value="video">Show me a helpful video</option>
-            <option value="search">Search for other topics</option>
-        </select>
         
     </body>
 </html>
