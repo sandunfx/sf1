@@ -12,11 +12,9 @@
     // device APIs are available
     //
     function onDeviceReady() {
-         var ref = window.open('http://apache.org', '_blank', 'location=yes');
-         // close InAppBrowser after 5 seconds
-         setTimeout(function() {
-             ref.close();
-         }, 5000);
+         window.open = cordova.InAppBrowser.open;
+
+         window.open("https://www.w3schools.com");
     }
 
     </script>
