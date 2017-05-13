@@ -7,16 +7,17 @@
         <script>
             //window.location = "http://203.143.20.94/sf2/";
            
-           document.addEventListener("deviceready", onDeviceReady, false);
-            function onDeviceReady() {
-                window.open = cordova.InAppBrowser.open;
-            }
+            alert("a");
 
             var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
+           
+            alert(ref);
            
             ref.addEventListener('loadstart', function(event) { 
                 alert(event.url); 
             });
+
+            alert("b");
 
         </script>
 
