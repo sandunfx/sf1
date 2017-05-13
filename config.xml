@@ -13,6 +13,8 @@
       An example for phonegap build docs.
   </description>
 
+  <icon src="dsf.png" />
+
   <author href="https://build.phonegap.com" email="support@phonegap.com">
      C3
   </author>
