@@ -12,9 +12,17 @@
     // device APIs are available
     //
     function onDeviceReady() {
-         window.open = cordova.InAppBrowser.open;
 
-         window.open("https://www.w3schools.com");
+        try {
+              window.open = cordova.InAppBrowser.open;
+
+           window.open("https://www.w3schools.com");
+        }
+         catch(err) {
+
+                    alert(err.message);
+
+                    }
     }
 
     </script>
