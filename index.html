@@ -27,29 +27,38 @@
      <script>
             //window.location = "http://203.143.20.94/sf2/";
 
-            document.addEventListener("deviceready", function () {
-                try {
+            $( document ).ready(function() {
+                    console.log( "ready!" );
 
-                      alert(window.location.href );
-                      //  alert(cordova);
+                    document.addEventListener("deviceready", function () {
+                    try {
 
-                     // navigator.vibrate
-                        
+                    //   alert(window.location.href );
+                        //  alert(cordova);
+
+                        // navigator.vibrate
+                            
                         alert(cordova.InAppBrowser);
 
+                        //   var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
+                        
+                        //    ref.addEventListener('loadstart', function(event) { 
+                        //       alert(event.url); 
+                        //   });
+
                         var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
-                    
-                        ref.addEventListener('loadstart', function(event) { 
-                     //       alert(event.url); 
-                        });
+                        ref.addEventListener('loadstart', function(event) { alert(event.url); });
 
-                    }
-                    catch(err) {
+                        }
+                        catch(err) {
 
-                       alert(err.message);
+                        alert(err.message);
 
-                    }
-            }, false);
+                        }
+                }, false);
+            });
+
+          
         </script>
 
     </body>
