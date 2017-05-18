@@ -19,7 +19,7 @@
         C3
     </author>
 
-    <content src="index.html"/>
+    <content src="index4.html"/>
     
     <plugin name="cordova-plugin-whitelist" spec="1" />
     <access origin="*" />
