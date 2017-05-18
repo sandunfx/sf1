@@ -13,12 +13,22 @@
     </script>
 
     <script>
+      
+        document.addEventListener("deviceready", function() {
+            try {
 
-        $('#b1').click(function() {
-           
-            alert("a");
+                $('#b1').click(function() {
 
-        });
+                    var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
+
+                });
+
+            } catch (err) {
+
+                alert(err.message);
+
+            }
+        }, false);
 
     </script>
 
