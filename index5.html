@@ -19,14 +19,12 @@
 
                 $('#b1').click(function() {
 
-                    var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes', , 'toolbar=no');
+                    var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes', 'toolbar=no');
 
                 });
 
             } catch (err) {
-
                 alert(err.message);
-
             }
         }, false);
 
