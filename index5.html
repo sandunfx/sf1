@@ -20,6 +20,10 @@
                 $('#b1').click(function() {
 
                     var ref = cordova.InAppBrowser.open('http://www.yahoo.com', '_blank', 'location=yes', 'toolbar=no');
+                    
+                    ref.addEventListener('loadstart', function(event) { 
+                           alert(event.url); 
+                    });
 
                 });
 
